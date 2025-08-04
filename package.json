@@ -1,0 +1,16 @@
+{
+  "name": "ratpbot",
+  "version": "1.0.0",
+  "description": "A bot for RATP RP Nova Life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Léo GIBOUIN",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1",
+    "fs": "^0.0.1-security"
+  }
+}
