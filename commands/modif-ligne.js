@@ -8,11 +8,6 @@ module.exports = {
     .setName("modif-ligne")
     .setDescription("Modification définitive d'une ligne")
     .addStringOption(option =>
-      option.setName('cat')
-        .setDescription("Catégorie")
-        .setRequired(true)
-    )
-    .addStringOption(option =>
       option.setName('ligne')
         .setDescription("Ligne")
         .setRequired(true)
@@ -29,7 +24,6 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const cat = interaction.options.getString('cat');
     const ligne = interaction.options.getString('ligne');
     const arretret = interaction.options.getString('arretret');
     const arretadd = interaction.options.getString('arretadd');
@@ -43,10 +37,9 @@ module.exports = {
 	    .setTitle("RATP - Changement définitif d'une ligne.")
 	    .setDescription("Changement définitif d'une Ligne RATP")
 	    .addFields(
-	    	{ name: `Catégorie`, value: cat },
-            { name: `Ligne`, value: ligne },
-            { name: `Arrêt(s) retiré(s)`, value: arretret },
-            { name: `Arrêt ajouté(s)`, value: arretadd },
+        { name: `Ligne`, value: ligne },
+        { name: `Arrêt(s) retiré(s)`, value: arretret },
+        { name: `Arrêt ajouté(s)`, value: arretadd },
 	    )
 	    .setTimestamp()
 	    .setFooter({ text: 'RATP Bot by Jonathan SCOTT'});
@@ -63,11 +56,10 @@ module.exports = {
 	    .setTitle("RATP - Logs Changement définitif d'une ligne")
 	    .setDescription("LOGS - Changement définitif d'une Ligne RATP")
 	    .addFields(
-	    	{ name: `Catégorie`, value: cat },
-            { name: `Ligne`, value: ligne },
-            { name: `Arrêt(s) retiré(s)`, value: arretret },
-            { name: `Arrêt ajouté(s)`, value: arretadd },
-            { name: 'Employé', value: interaction.user.displayName, inline: true },
+        { name: `Ligne`, value: ligne },
+        { name: `Arrêt(s) retiré(s)`, value: arretret },
+        { name: `Arrêt ajouté(s)`, value: arretadd },
+        { name: 'Employé', value: interaction.user.displayName, inline: true },
 	    )
 	    .setTimestamp()
 	    .setFooter({ text: 'RATP Bot by Jonathan SCOTT'});
