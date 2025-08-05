@@ -72,7 +72,7 @@ module.exports = {
       return;
     }
 
-    await interaction.reply({ content: "Nombre de bus envoyé dans le channel d'annonces.", ephemeral: true });
+    await interaction.reply({ content: "Modif envoyé !", ephemeral: true });
     return;
     // 
     
